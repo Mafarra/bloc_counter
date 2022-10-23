@@ -19,12 +19,20 @@ class CounterView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Text(
+                'Add/subtract',
+                style: textTheme.headline5,
+              ),
             BlocBuilder<CounterCubit, int>(builder: ((context, state) {
               return Text(
                 '$state',
                 style: textTheme.headline2,
               );
             })),
+            Text(
+                'Dublicate',
+                style: textTheme.headline5,
+              ),
             BlocBuilder<CounterCubit2, int>(builder: ((context, state) {
               return Text(
                 '$state',
