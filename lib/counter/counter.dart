@@ -1,3 +1,4 @@
+import 'package:bloc_counter/counter/cubit/counter_cubit2.dart';
 import 'package:bloc_counter/counter/view/counter_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +13,7 @@ class CounterPage extends StatelessWidget {
     //from the consumption of a Cubit in order to 
     //have code that is much more testable and reusable.
     return BlocProvider(
-      create: (_) => CounterCubit(),
+      create: (_) => CounterCubit2(),
       child: const CounterView(),
     );
   }
