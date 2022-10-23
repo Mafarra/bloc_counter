@@ -9,11 +9,21 @@ class CounterPage extends StatelessWidget {
   const CounterPage({super.key});
   @override
   Widget build(BuildContext context) {
-    //Note: It's important to separate or decouple the creation of a Cubit 
-    //from the consumption of a Cubit in order to 
-    //have code that is much more testable and reusable.
-    return BlocProvider(
-      create: (_) => CounterCubit2(),
+    // Note: It's important to separate or decouple the creation of a Cubit 
+    // from the consumption of a Cubit in order to 
+    // have code that is much more testable and reusable.
+    return MultiBlocProvider(
+      // create: (_) => CounterCubit(),
+      providers: [
+        BlocProvider(
+          create: (_) => CounterCubit(),
+          child: const CounterView(),
+          ),
+        BlocProvider(
+          create: (_) => CounterCubit2(),
+          child: const CounterView(),
+          ),
+      ],
       child: const CounterView(),
     );
   }

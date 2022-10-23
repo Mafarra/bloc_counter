@@ -19,12 +19,12 @@ class CounterView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // BlocBuilder<CounterCubit, int>(builder: ((context, state) {
-            //   return Text(
-            //     '$state',
-            //     style: textTheme.headline2,
-            //   );
-            // })),
+            BlocBuilder<CounterCubit, int>(builder: ((context, state) {
+              return Text(
+                '$state',
+                style: textTheme.headline2,
+              );
+            })),
             BlocBuilder<CounterCubit2, int>(builder: ((context, state) {
               return Text(
                 '$state',
@@ -38,18 +38,18 @@ class CounterView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          // FloatingActionButton(
-          //   key: const Key('counterView_increment_floatingActionButton'),
-          //   child: const Icon(Icons.add),
-          //   onPressed: () => context.read<CounterCubit>().increment(),
-          // ),
-          // const SizedBox(
-          //   height: 8,
-          // ),
-          // FloatingActionButton(
-          //     key: const Key('CounterView_decrement_floatingActionButton'),
-          //     child: const Icon(Icons.remove),
-          //     onPressed: () => context.read<CounterCubit>().decrement()),
+          FloatingActionButton(
+            key: const Key('counterView_increment_floatingActionButton'),
+            child: const Icon(Icons.add),
+            onPressed: () => context.read<CounterCubit>().increment(),
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          FloatingActionButton(
+              key: const Key('CounterView_decrement_floatingActionButton'),
+              child: const Icon(Icons.remove),
+              onPressed: () => context.read<CounterCubit>().decrement()),
           const SizedBox(
             height: 8,
           ),
