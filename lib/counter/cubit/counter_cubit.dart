@@ -8,4 +8,10 @@ class CounterCubit extends Cubit<int> {
   void decrement() => emit(state - 1);
   //dublicate the current state.
   void dublicate() => emit(state * 2);
+  // in this app we use on change method in blocOpserver class
+  //  @override
+  // void onChange(Change<int> change) {
+  //   super.onChange(change);
+  //   print('CounterCubitChange: $change');
+  // }
 }

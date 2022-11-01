@@ -6,7 +6,7 @@ import 'app.dart';
 
 void main() {
   Bloc.observer = CounterObserver();
-  runApp(const CounterApp());
+  runApp(const CounterApp(),);
 }
 
 // class MyApp extends StatelessWidget {
